@@ -1,0 +1,52 @@
+.auth-page {
+  min-height: calc(100vh - 64px);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--gray-100); padding: 40px 20px;
+}
+.auth-card {
+  background: var(--white); border: 1px solid var(--gray-300);
+  padding: 48px 44px; width: 100%; max-width: 420px;
+}
+.auth-logo {
+  display: block; text-align: center;
+  font-size: 15px; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; border: 1.5px solid var(--black);
+  padding: 6px 14px; width: fit-content; margin: 0 auto 32px;
+}
+.auth-title {
+  font-size: 24px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: -0.01em; text-align: center; margin-bottom: 8px;
+}
+.auth-sub { font-size: 13px; color: var(--gray-500); text-align: center; margin-bottom: 28px; }
+
+.auth-form { display: flex; flex-direction: column; gap: 18px; margin-bottom: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 7px; }
+.form-group label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-500); }
+.form-group input {
+  border: 1px solid var(--gray-300); padding: 12px 14px;
+  font-size: 14px; outline: none; transition: border-color var(--transition);
+}
+.form-group input:focus { border-color: var(--black); }
+
+.auth-btn { width: 100%; padding: 14px; font-size: 13px; }
+.demo-btn { margin-bottom: 0; }
+
+.auth-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 20px 0; color: var(--gray-400); font-size: 12px;
+}
+.auth-divider::before, .auth-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--gray-300);
+}
+
+.demo-creds {
+  margin-top: 14px; padding: 14px;
+  background: var(--gray-100); border: 1px solid var(--gray-200);
+  font-size: 11px; color: var(--gray-500); line-height: 1.8;
+}
+.demo-creds strong { color: var(--black); }
+
+.auth-footer {
+  text-align: center; font-size: 13px; color: var(--gray-500); margin-top: 24px;
+}
+.auth-footer a { color: var(--black); text-decoration: underline; font-weight: 600; }

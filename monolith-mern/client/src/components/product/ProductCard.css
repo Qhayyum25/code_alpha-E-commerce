@@ -1,0 +1,66 @@
+.product-card { display: flex; flex-direction: column; }
+
+.card-image-link { position: relative; display: block; overflow: hidden; }
+
+.card-image {
+  width: 100%; aspect-ratio: 3/4;
+  transition: transform 0.5s ease;
+}
+.card-image-link:hover .card-image { transform: scale(1.03); }
+
+.out-of-stock-badge {
+  position: absolute; top: 12px; left: 12px;
+  background: rgba(255,255,255,0.9);
+  padding: 4px 10px; font-size: 10px;
+  font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+}
+
+.card-quick-add {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: var(--black); color: var(--white);
+  padding: 12px; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  opacity: 0; transform: translateY(100%);
+  transition: all 0.25s ease;
+}
+.card-image-link:hover .card-quick-add { opacity: 1; transform: translateY(0); }
+.card-quick-add:disabled { background: var(--gray-400); cursor: not-allowed; }
+
+.card-info { padding: 12px 0; }
+.card-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 4px;
+}
+.card-category {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gray-500);
+}
+.card-rating { display: flex; align-items: center; gap: 4px; }
+.card-review-count { font-size: 10px; color: var(--gray-500); }
+
+.card-bottom {
+  display: flex; align-items: baseline;
+  justify-content: space-between; gap: 8px;
+}
+.card-name {
+  font-size: 13px; font-weight: 500;
+  transition: text-decoration var(--transition);
+  flex: 1;
+}
+.card-name:hover { text-decoration: underline; }
+.card-price { font-size: 13px; font-weight: 700; white-space: nowrap; }
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  transition: transform 0.5s ease;
+}
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card-image-link:hover .card-img { transform: scale(1.05); }

@@ -1,0 +1,85 @@
+.checkout-page { padding: 40px 40px 80px; max-width: 1100px; }
+.checkout-title { font-size: 36px; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 36px; }
+
+/* Steps */
+.step-bar { display: flex; align-items: center; margin-bottom: 48px; }
+.step-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.step-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 2px solid var(--gray-300); background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: var(--gray-400);
+  transition: all 0.2s;
+}
+.step-item.active .step-circle { border-color: var(--black); color: var(--black); }
+.step-item.done .step-circle { background: var(--black); border-color: var(--black); color: var(--white); }
+.step-item span { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
+.step-item.active span, .step-item.done span { color: var(--black); }
+.step-line { flex: 1; height: 1px; background: var(--gray-300); margin: 0 12px; margin-bottom: 18px; transition: background 0.2s; }
+.step-line.done { background: var(--black); }
+
+/* Layout */
+.checkout-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
+.checkout-form-col {}
+
+/* Form */
+.checkout-form { background: var(--gray-100); padding: 32px; border: 1px solid var(--gray-200); }
+.form-section-title { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full { grid-column: 1 / -1; }
+.form-group label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-500); }
+.form-group input {
+  border: 1px solid var(--gray-300); padding: 11px 14px;
+  font-size: 14px; outline: none; background: var(--white);
+  transition: border-color var(--transition);
+}
+.form-group input:focus { border-color: var(--black); }
+
+.checkout-next-btn { width: 100%; padding: 15px; font-size: 13px; }
+
+.payment-methods { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.payment-option {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border: 1.5px solid var(--gray-300);
+  background: var(--white); cursor: pointer; font-size: 14px;
+  transition: border-color var(--transition);
+}
+.payment-option.selected { border-color: var(--black); }
+.payment-option input { accent-color: var(--black); }
+.card-fields { margin-top: 16px; }
+.card-note { font-size: 11px; color: var(--gray-500); margin-top: -8px; }
+
+.form-nav-row { display: flex; gap: 12px; justify-content: space-between; margin-top: 24px; }
+.place-order-btn { flex: 1; padding: 15px; font-size: 13px; }
+
+.review-section {
+  padding: 16px 0; border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 16px; font-size: 13px; color: var(--gray-700); line-height: 1.7;
+}
+.review-section-head {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--black); margin-bottom: 8px;
+}
+.edit-link { font-size: 11px; color: var(--gray-500); text-decoration: underline; }
+.edit-link:hover { color: var(--black); }
+
+/* Sidebar */
+.checkout-summary { border: 1px solid var(--gray-300); padding: 28px; position: sticky; top: 80px; }
+.checkout-items { display: flex; flex-direction: column; gap: 16px; margin-bottom: 4px; }
+.checkout-item { display: flex; gap: 12px; align-items: center; }
+.checkout-item-img { width: 56px; height: 68px; flex-shrink: 0; border-radius: 2px; }
+.checkout-item-info { flex: 1; }
+.checkout-item-name { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.checkout-item-qty { font-size: 12px; color: var(--gray-500); }
+.checkout-item-price { font-size: 13px; font-weight: 700; white-space: nowrap; }
+.summary-title { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+.summary-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 10px; }
+.summary-total { font-size: 15px; font-weight: 800; }
+
+@media (max-width: 900px) { .checkout-layout { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .checkout-page { padding: 24px 20px 60px; }
+  .form-grid { grid-template-columns: 1fr; }
+}
